@@ -104,20 +104,21 @@ body{
 	cursor: pointer;
 	align-self: center;
 }
+.about{
+	padding: 94px 0 0;
+}
 .about-items{
 	display: flex;
 	gap: 30px;
 }
 .about-item{
-	margin-top: 94px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+	flex: 1 1 270px;
 }
 .about-item-title{
 	font-weight: 700;
 	font-size: 14px;
 	color: #212121;
+	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 .about-item-description{
@@ -125,16 +126,28 @@ body{
 	font-size: 14px;
 	color: #757575;
 }
+.do{
+	padding: 94px 0 94px;
+}
 .do-tittle{
 	font-weight: 700;
 	font-size: 36px;
 	color: #212121;
 	text-align: center;
-	margin: 94px 0 50px;
+	margin: 0 0 50px;
 }
 .do-cards{
 display: flex;
 gap: 30px;
+}
+.do-card{
+	height: 260px;
+	flex: 1 1 370px;
+}
+.do-card img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .team{
 	background: #F5F4FA;
@@ -182,8 +195,8 @@ gap: 30px;
 	background: #2F303A;
 	padding: 60px 0;
 }
-.footer-conteiner{
-	min-height: 252px;
+.footer-logo{
+	display: inline-block;
 }
 .footer-menu{
 	margin-top: 20px;
