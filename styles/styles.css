@@ -31,11 +31,18 @@
 	font-style: normal;
 	font-display: swap;
 }
+:root{
+	--main-color: #FFFFFF;
+	--text-color: #212121;
+	--link-color: #2196F3;
+	--brand-color: #2F303A;
+}
 body{
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.3;
 	font-size: 14px;
-	color: #212121;
+	color: var(--text-color);
+	background: var(--main-color);
 }
 .conteiner{
 	max-width: 1200px;
@@ -58,7 +65,7 @@ body{
 }
 .header-menu a.active,
 .header-second-menu a.active{
-	color: #2196F3;
+	color: var(--link-color);
 }
 .header-second-menu{
 	margin-left: auto;
@@ -72,10 +79,10 @@ body{
 }
 .header-menu a:hover,
 .header-second-menu a:hover{
-	color: #2196F3;
+	color: var(--link-color);
 }
 .hero{
-	background: #2F303A;
+	background: var(--brand-color);
 	text-align: center;
 }
 .hero-inner{
@@ -99,7 +106,7 @@ body{
 	font-weight: 700;
 	font-size: 16px;
 	color: #fff;
-	background: #2196F3;
+	background: var(--link-color);
 	border-radius: 4px;
 	cursor: pointer;
 	align-self: center;
@@ -209,11 +216,11 @@ gap: 30px;
 	cursor: pointer;
 }
 .portfolio-btn.active{
-	background: #2196F3;
+	background: var(--link-color);
 	color: #FFFFFF;
 }
 .portfolio-btn:hover{
-	background: #2196F3;
+	background: var(--link-color);
 	color: #FFFFFF;
 }
 .portfolio-cards{
@@ -253,7 +260,7 @@ gap: 30px;
 }
 
 .footer{
-	background: #2F303A;
+	background: var(--brand-color);
 	padding: 60px 0;
 }
 .footer-logo{
