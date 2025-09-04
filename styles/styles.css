@@ -237,6 +237,22 @@ gap: 30px;
 .portfolio-card-link{
 	display: block;
 	height: 294px;
+	position: relative;
+}
+.portfolio-card-link-desc{
+	position: absolute;
+	inset: 0;
+	background: rgba(33, 150, 243, 0.9);
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 63px 24px;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+}
+.portfolio-card:hover .portfolio-card-link-desc{
+	opacity: 1;
 }
 .portfolio-card-link img{
 	width: 100%;
