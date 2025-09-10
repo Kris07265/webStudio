@@ -1,0 +1,360 @@
+@import url('reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+:root{
+	--main-color: #FFFFFF;
+	--text-color: #212121;
+	--link-color: #2196F3;
+	--brand-color: #2F303A;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.3;
+	font-size: 14px;
+	color: var(--text-color);
+	background: var(--main-color);
+}
+.conteiner{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.header{
+	border: 1px solid #ECECEC;
+	padding: 25px 0;
+	font-weight: 500;
+}
+.header-conteiner{
+    display: flex;
+	align-items: center;
+}
+.header-menu{
+	display: flex;
+	gap: 50px;
+	margin-left: 90px;
+	position: relative;
+	z-index: 5;
+}
+.filters{
+	position: relative;
+}
+.header-menu-filters{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding-top: 34px;
+	display: none;
+}
+.filter-btn{
+	padding: 6px 26px 7px;
+	font-weight: 500;
+	font-size: 16px;
+	color: #212121;
+	background: #F5F4FA;
+	border-radius: 4px;
+	width: 130px;
+	border: 1px solid var(--link-color);
+}
+.filter-btn:hover{
+	background: var(--link-color);
+	color: #FFFFFF;
+}
+.filters:hover .header-menu-filters{
+	display: block;
+}
+.filter-btn-last{
+	position: relative;
+}
+.filter-btn-left{
+	position: absolute;
+	top: 0;
+	right: 100%;
+	display: none;
+}
+.filter-btn-last:hover .filter-btn-left{
+	display: block;
+}
+.header-menu a.active,
+.header-second-menu a.active{
+	color: var(--link-color);
+}
+.header-second-menu{
+	margin-left: auto;
+	display: flex;
+	gap: 50px;
+}
+.header-menu a,
+.header-second-menu a{
+	color: #212121;
+	text-decoration: none;
+}
+.header-menu a:hover,
+.header-second-menu a:hover{
+	color: var(--link-color);
+}
+.hero{
+	background: url(../images/hero-photo.png) no-repeat;
+	text-align: center;
+}
+.hero-inner{
+	max-width: 700px;
+	min-height: 600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+}
+.hero-title{
+	font-weight: 900;
+	font-size: 44px;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 5px;
+}
+.hero-btn{
+	padding: 14px 46px 15px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	background: var(--link-color);
+	border-radius: 4px;
+	cursor: pointer;
+	align-self: center;
+}
+.about{
+	padding: 94px 0 0;
+}
+.about-items{
+	display: flex;
+	gap: 30px;
+}
+.about-item{
+	flex: 1 1 270px;
+	padding-top: 120px;
+	position: relative;
+}
+.about-item::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	border-radius: 4px;
+}
+.about-item-antenna::before{
+	background: url(../images/antenna.svg) no-repeat 50%, #F5F4FA;
+}
+.about-item-clock::before{
+background: url(../images/clock.svg) no-repeat 50%, #F5F4FA;
+}
+.about-item-diagramma::before{
+background: url(../images/diagram.svg) no-repeat 50%, #F5F4FA;
+}
+.about-item-astronaut::before{
+background: url(../images/astronaut.svg) no-repeat 50%, #F5F4FA;
+}
+.about-item-title{
+	font-weight: 700;
+	font-size: 14px;
+	color: #212121;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.about-item-description{
+	font-weight: 400;
+	font-size: 14px;
+	color: #757575;
+}
+.do{
+	padding: 94px 0 94px;
+}
+.do-tittle{
+	font-weight: 700;
+	font-size: 36px;
+	color: #212121;
+	text-align: center;
+	margin: 0 0 50px;
+}
+.do-cards{
+display: flex;
+gap: 30px;
+}
+.do-card{
+	height: 260px;
+	flex: 1 1 370px;
+}
+.do-card img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.team{
+	background: #F5F4FA;
+	padding: 94px 0;
+	text-align: center;
+}
+.team-tittle{
+	font-weight: 700;
+	font-size: 36px;
+}
+.team-cards{
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.team-card{
+	flex: 1 1 20%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 14px 0 #ccc;
+}
+.team-card-link{
+	display: block;
+	height: 260px;
+}
+.team-card-link img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.team-card-inner{
+	padding: 30px;
+	font-size: 16px;
+	background: #fff;
+}
+.team-card-title{
+	font-weight: 500;
+}
+.team-card-desc{
+	color: #757575;
+	margin-top: 10px;
+}
+.portfolio{
+	padding: 94px 0 94px;
+}
+.portfolio-links{
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+.portfolio-btn{
+	padding: 6px 26px 7px;
+	font-weight: 500;
+	font-size: 16px;
+	color: #212121;
+	background: #F5F4FA;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.portfolio-btn.active{
+	background: var(--link-color);
+	color: #FFFFFF;
+}
+.portfolio-btn:hover{
+	background: var(--link-color);
+	color: #FFFFFF;
+}
+.portfolio-cards{
+	margin: 34px 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.portfolio-card{
+	flex: 1 1 30%;
+	overflow: hidden;
+	border: 1px solid #EEEEEE
+}
+.portfolio-card-link{
+	display: block;
+	height: 294px;
+	position: relative;
+}
+.portfolio-card-link-desc{
+	position: absolute;
+	inset: 0;
+	background: rgba(33, 150, 243, 0.9);
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 63px 24px;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+}
+.portfolio-card:hover .portfolio-card-link-desc{
+	opacity: 1;
+}
+.portfolio-card-link img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.portfolio-card-inner{
+	padding: 30px;
+	background: #FFFFFF;
+}
+.portfolio-card-title{
+	font-weight: 700;
+	font-size: 18px;
+	color: #212121;
+}
+.portfolio-card-desc{
+	font-weight: 400;
+	font-size: 16px;
+	color: #757575;
+	margin-top: 10px;
+}
+
+.footer{
+	background: var(--brand-color);
+	padding: 60px 0;
+}
+.footer-logo{
+	display: inline-block;
+}
+.footer-menu{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+.footer-menu a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 14px;
+}
