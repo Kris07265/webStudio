@@ -262,6 +262,64 @@ gap: 30px;
 	color: #757575;
 	margin-top: 10px;
 }
+.team-card-nav{
+    display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 16px;
+}
+.team-card-nav a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 44px;
+    height: 44px;
+	color: #AFB1B8;
+	border-radius: 50%;
+	transition: all 0.3s linear;
+}
+.team-card-nav a:hover{
+    background: var(--link-color);
+	color: #FFFFFF;
+}
+.team-card-nav svg{
+    width: 20px;
+    height: 20px;
+}
+.regular{
+    padding: 94px 0;
+}
+.regular-title{
+    font-weight: 700;
+	font-size: 36px;
+	color: var(--text-color);
+	text-align: center;
+}
+.regular-nav{
+    display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-top: 50px;
+}
+.regular-nav a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	height: 92px;
+	color: #AFB1B8;
+	border: 1px solid#AFB1B8;
+	position: relative;
+	transition: color 0.3s linear;
+}
+.regular-nav a:hover{
+    color: var(--link-color);
+	border: 1px solid var(--link-color);
+}
+.regular-nav svg{
+    width: 106px;
+	height: 60px;
+}
 .portfolio{
 	padding: 94px 0 94px;
 }
@@ -343,6 +401,10 @@ gap: 30px;
 	background: var(--brand-color);
 	padding: 60px 0;
 }
+.footer-conteiner{
+    display: flex;
+    gap: 130px;
+}
 .footer-logo{
 	display: inline-block;
 }
@@ -357,4 +419,41 @@ gap: 30px;
 	color: #FFFFFF;
 	font-weight: 400;
 	font-size: 14px;
+}
+.footer-right-title{
+    font-weight: 700;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.footer-right-nav{
+    display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 20px;
+}
+.footer-right-nav a{
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	transition: all 0.3s linear;
+}
+.footer-right-nav a:hover{
+    background: var(--link-color);
+}
+.footer-right-nav svg{
+    width: 20px;
+	height: 20px;
+}
+.hidden{
+    position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
 }
