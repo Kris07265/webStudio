@@ -65,6 +65,9 @@ body{
 	position: relative;
 	z-index: 5;
 }
+.header-burger {
+	display: none;
+}
 .filters{
 	position: relative;
 }
@@ -90,7 +93,9 @@ body{
 	color: #FFFFFF;
 }
 .filters:hover .header-menu-filters{
-	display: block;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 }
 .filter-btn-last{
 	position: relative;
@@ -98,7 +103,7 @@ body{
 .filter-btn-left{
 	position: absolute;
 	top: 0;
-	right: 100%;
+	right: calc(100% + 2px);
 	display: none;
 }
 .filter-btn-last:hover .filter-btn-left{
@@ -158,6 +163,7 @@ body{
 .about-items{
 	display: flex;
 	gap: 30px;
+	flex-wrap: wrap;
 }
 .about-item{
 	flex: 1 1 20%;
@@ -210,10 +216,11 @@ background: url(../images/astronaut.svg) no-repeat 50%, #F5F4FA;
 .do-cards{
 display: flex;
 gap: 30px;
+flex-wrap: wrap;
 }
 .do-card{
 	height: 260px;
-	flex: 1 1 370px;
+	flex: 1 1 30%;
 }
 .do-card img{
 	width: 100%;
@@ -299,10 +306,11 @@ gap: 30px;
     display: flex;
 	justify-content: center;
 	gap: 30px;
+	flex-wrap: wrap;
 	margin-top: 50px;
 }
 .regular-nav li{
-	flex: 1 1 15%;
+	flex: 1 1 10%;
 }
 .regular-nav a{
 	display: flex;
@@ -323,12 +331,13 @@ gap: 30px;
 	height: 60px;
 }
 .portfolio{
-	padding: 94px 0 94px;
+	padding: 94px 0;
 }
 .portfolio-links{
 	display: flex;
 	justify-content: center;
 	gap: 8px;
+	flex-wrap: wrap;
 }
 .portfolio-btn{
 	padding: 6px 26px 7px;
@@ -405,7 +414,7 @@ gap: 30px;
 }
 .footer-conteiner{
     display: flex;
-    gap: 130px;
+	gap: 130px;
 }
 .footer-logo{
 	display: inline-block;
@@ -458,4 +467,115 @@ gap: 30px;
 	width: 0;
 	height: 0;
 	opacity: 0;
+}
+@media (max-width: 1200px) {
+
+	.header-menu,
+	.header-second-menu {
+		gap: 20px;
+	}
+
+	.header-menu {
+		margin-left: 40px;
+	}
+	.hero-inner {
+		min-height: 400px;
+	}
+
+	.hero-title {
+		font-size: 26px;
+	}
+	.about-item{
+		flex-basis: 45%;
+	}
+	.do-card {
+		flex-basis: 46%;
+	}
+	.team-card {
+		flex-basis: 46%;
+	}
+
+	.team-card-link {
+		height: 460px;
+	}
+	.regular-nav li{
+		flex-basis: 30%;
+	}
+	.portfolio-card{
+		flex-basis: 45%;
+	}
+}
+@media (max-width: 768px) {
+	.header {
+		padding: 11px 0;
+	}
+
+	.header-menu,
+	.header-second-menu {
+		display: none;
+	}
+
+	.header-burger {
+		display: block;
+		width: 24px;
+		height: 16px;
+		margin-left: auto;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.header-burger::before,
+	.header-burger::after,
+	.header-burger span {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: #000;
+	}
+
+	.header-burger::after {
+		top: auto;
+		bottom: 0;
+	}
+
+	.header-burger span {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.about{
+	padding: 60px 0 0;
+}
+	.about-item{
+		flex-basis: 100%;
+	}
+	.do{
+		display: none;
+	}
+	.team-card {
+		flex-basis: 100%;
+	}
+	.team {
+		padding: 60px 0;
+	}
+	.regular{
+		display: none;
+	}
+	.portfolio{
+	padding: 60px 0;
+}
+	.portfolio-links{
+		justify-content: flex-start;
+	}
+	.portfolio-card{
+		flex-basis: 100%;
+	}
+	.footer-right{
+		display: none;
+	}
+	.footer-conteiner{
+		justify-content: center;
+	}
 }
