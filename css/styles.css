@@ -160,7 +160,7 @@ body{
 	gap: 30px;
 }
 .about-item{
-	flex: 1 1 270px;
+	flex: 1 1 20%;
 	padding-top: 120px;
 	position: relative;
 }
@@ -301,11 +301,13 @@ gap: 30px;
 	gap: 30px;
 	margin-top: 50px;
 }
+.regular-nav li{
+	flex: 1 1 15%;
+}
 .regular-nav a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 170px;
 	height: 92px;
 	color: #AFB1B8;
 	border: 1px solid#AFB1B8;
